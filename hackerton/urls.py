@@ -15,8 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from foodview import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('foodview.urls')),
+    path('', views.main, name='main'),
+    path('intro/', views.intro, name='intro'),
+    path('find/', views.find, name='find'),
+    path('help/', views.help1, name='help'),
+    path('map',include('foodview.urls')),
 ]
