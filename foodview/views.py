@@ -63,6 +63,19 @@ def index(request):
 
 
 
+def main(request):
+    return render(request, 'main.html')
+
+def intro(request):
+    return render(request, 'intro.html')
+
+def find(request):
+    return render(request, 'find.html')
+
+def help1(request):
+    return render(request, 'help.html')
+
+
 
 
 
